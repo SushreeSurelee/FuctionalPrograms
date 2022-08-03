@@ -11,8 +11,8 @@ namespace FunctionalProgramming
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Fuctional Programming application.\n");
-            Console.WriteLine("Please choose number between 1 to 10 as shown below\n");
-            Console.WriteLine("1:Flip a coin");
+            Console.WriteLine("Please choose number as shown below to run corresponding application\n");
+            Console.WriteLine("1:Flip coin\n2:Leap Year");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -20,6 +20,11 @@ namespace FunctionalProgramming
                     Console.WriteLine("Enter the Number of time you would like to flip the coin");
                     int numOfTurns = Convert.ToInt32(Console.ReadLine());
                     FlipCoin.FlipACoin(numOfTurns);
+                    break;
+                case 2:
+                    Console.WriteLine("Enter the year you would like to check : ");
+                    int yearCheck = Convert.ToInt32(Console.ReadLine());
+                    LeapYear.LeapYears(yearCheck);
                     break;
                 default:
                     Console.WriteLine("Enter a valid number. Terminating application");
